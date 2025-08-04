@@ -1,0 +1,22 @@
+[project]
+name = "mesh-orchestrator"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Anteneh Negash", email = "antenehnegash@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10,<4.0"  # 🔧 adjusted to be compatible with langchain
+dependencies = [
+      "openai>=1.0",
+      "langchain>=0.3.27",
+      "langchain-openai>=0.1.0",
+      "langchain-community>=0.0.1",
+      "requests>=2.0",
+      "jsonschema>=4.0",
+      "python-dotenv>=1.0"
+  ]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
