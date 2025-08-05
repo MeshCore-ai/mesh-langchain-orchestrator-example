@@ -37,7 +37,7 @@ def logged_call(self, *args, **kwargs):
 Tool.__call__ = logged_call  # Override tool call behavior
 
 # === Set up SDK and Tools ===
-sdk = MeshSDK()  # No token needed for public endpoints
+sdk = MeshSDK(api_key=mesh_token)
 
 # Load available agents
 agents = sdk.list_agents()
