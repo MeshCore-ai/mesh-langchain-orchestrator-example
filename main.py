@@ -7,8 +7,6 @@ from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 import logging
 
-# Add the local mesh_sdk to Python path
-sys.path.insert(0, str(Path(__file__).parent.parent / "mesh_sdk"))
 from sdk import MeshSDK
 
 # === Load secrets ===

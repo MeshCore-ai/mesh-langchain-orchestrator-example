@@ -14,7 +14,8 @@ dependencies = [
       "langchain-community>=0.0.1",
       "requests>=2.0",
       "jsonschema>=4.0",
-      "python-dotenv>=1.0"
+      "python-dotenv>=1.0",
+      "ai-mesh-sdk"
   ]
 
 [build-system]
