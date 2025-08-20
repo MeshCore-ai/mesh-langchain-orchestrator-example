@@ -4,12 +4,7 @@
 import os
 import sys
 import logging
-from pathlib import Path
 from dotenv import load_dotenv
-
-# Add new SDK path
-new_sdk_path = Path(__file__).parent.parent / 'mesh_sdk_new' / 'src'
-sys.path.insert(0, str(new_sdk_path))
 
 from mesh_sdk import MeshClient, MeshSDKError
 from mesh_sdk.exceptions import AuthenticationError, APIError
@@ -28,16 +23,16 @@ def main():
     
     # Load environment variables
     load_dotenv()
-    mesh_token = os.getenv("MESH_TOKEN") or os.getenv("MESH_API_KEY")
+    mesh_api_key = os.getenv("MESH_API_KEY")
     
-    if not mesh_token:
-        logger.error("Please set MESH_TOKEN or MESH_API_KEY environment variable")
+    if not mesh_api_key:
+        logger.error("Please set MESH_API_KEY environment variable")
         return 1
     
     try:
         # Initialize the professional SDK client
         logger.info("🚀 Initializing Mesh SDK client...")
-        with MeshClient(api_key=mesh_token) as client:
+        with MeshClient(api_key=mesh_api_key) as client:
             
             # Demo different SDK capabilities
             logger.info("📋 Fetching available agents...")
