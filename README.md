@@ -9,17 +9,17 @@ This project demonstrates how to use the AI Mesh SDK with LangChain to dynamical
 pip install poetry
 
 # Clone this repo or create the structure
-cd mesh-orchestrator
+cd mesh_langchain_orchestrator_example
 poetry install
 ```
 
 ## 🧠 Environment Variables
 
-Create a `.env` file:
+Copy the example environment file and update with your tokens:
 
-```
-OPENAI_API_KEY=your-openai-key
-MESH_TOKEN=your-mesh-token
+```bash
+cp .env.example .env
+# Edit .env with your actual MESH_TOKEN
 ```
 
 ## 🚀 Run the Orchestrator
